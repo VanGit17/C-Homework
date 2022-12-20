@@ -1,23 +1,26 @@
-﻿/*Напишите программу, которая принимает на вход число (N) и
- выдаёт таблицу кубов чисел от 1 до N.
+﻿Console.WriteLine("Найдём расстояние между точками в трехмерном пространстве: ");
+Console.WriteLine("Введите координаты первой точки: x1, y1, z1: ");
 
-3 -> 1, 8, 27
-5 -> 1, 8, 27, 64, 125
-*/
-Console.Write("Введите число N ");
-int N = int.Parse(Console.ReadLine());
-int i = 1;
-if (N>0) 
+Console.Write("x1: ");
+double x1 = double.Parse(Console.ReadLine());
+Console.Write("y1: ");
+double y1 = double.Parse(Console.ReadLine());
+Console.Write("z1: ");
+double z1 = double.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите координаты второй точки: ");
+Console.Write("x1: ");
+double x2 = double.Parse(Console.ReadLine());
+Console.Write("y1: ");
+double y2 = double.Parse(Console.ReadLine());
+Console.Write("z1: ");
+double z2 = double.Parse(Console.ReadLine());
+
+double SqDiff (double a,double b)
 {
-        while (i<=N)
-         {
-        Console.Write(" " + Math.Pow(i,3));
-          i++;
-         }
+    return Math.Pow(a-b,2);
 }
-else
- while (i>=N)
-         {
-        Console.Write(" " + Math.Pow(i,3));
-          i--;
-         }
+
+double distance = Math.Sqrt(SqDiff(x1,x2)+SqDiff(y1,y2)+SqDiff(z1,z2));
+Console.WriteLine("Расстояние между точками: " + distance);
+
