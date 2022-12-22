@@ -7,9 +7,11 @@
 //!В примере массивы разной длины, что расходится с формулировкой задачи,
 //в решении длина массива тоже задаётся случйно от 3 до 8 элементов Если нужен
 //массив именно длины 8 - это тривиально можно прописать в коде
-int m = new Random().Next(3,9);
-int[] Array =new int[m];
-for (int i=0; i<Array.Length; i++) Array[i] = new Random().Next(-10,11);
+
+int[] Array =new int[10];
+for (int i=0; i<Array.Length; i++) Array[i] = new Random().Next(-9,10);
+
+
 Console.Write("[");
 for (int i=0; i<Array.Length-1; i++) Console.Write($"{Array[i]}, ");
 Console.Write($"{Array[Array.Length-1]}]");
