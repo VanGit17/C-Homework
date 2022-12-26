@@ -9,12 +9,14 @@ Console.WriteLine("Введите число в десятичной систе�
 int number = int.Parse(Console.ReadLine());
 int Length =0;
 int counter = number;
- 
+ //int k = Convert.ToInt16(Math.Log(number,2)) ;
+ ///Console.WriteLine(k);
 while(counter>0)
 {
 Length++;
 counter = counter/2;
 }
+
 if(Length==0) Length = 1; 
 int[] ZeroOneNumber = new int[Length];
 for(int i =0; i<Length;i++)
@@ -28,3 +30,6 @@ for(int i =0; i<Length;i++)
 {
   Console.Write(ZeroOneNumber[i]);
 }
+Console.WriteLine();
+Console.WriteLine(Length);
+//Console.WriteLine(Math.Log(number,2));
